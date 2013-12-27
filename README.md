@@ -26,3 +26,16 @@ homepage should show emberjs app
 rails g resource story title body:text
 rake db:migrate
 
+rails g ember:route stories
+rails g ember:template stories
+
+Add router.js
+
+  @resource('stories')
+
+Replace `application.handlebars` with following:
+
+    <h1>My Stories</h1>
+    {{outlet}}
+
+Now visit `/#/stories`

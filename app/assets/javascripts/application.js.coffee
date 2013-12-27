@@ -8,3 +8,5 @@
 
 # for more details see: http://emberjs.com/guides/application/
 window.Omakase = Ember.Application.create()
+
+Omakase.ApplicationAdapter = DS.RESTAdapter
