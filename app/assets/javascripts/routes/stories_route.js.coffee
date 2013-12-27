@@ -5,3 +5,7 @@ Omakase.StoriesRoute = Ember.Route.extend
     @store.find 'story'
     @store.filter 'story', (story) ->
       not story.get('isNew')
+
+  actions:
+    delete: (story) ->
+      story.destroyRecord()
