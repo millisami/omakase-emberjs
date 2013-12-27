@@ -6,4 +6,5 @@ Omakase.StoryEditRoute = Ember.Route.extend
 
   actions:
     update: (story) ->
-      story.save()
+      story.save().then =>
+        @transitionTo('story', story)
