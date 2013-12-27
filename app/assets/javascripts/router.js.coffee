@@ -2,5 +2,6 @@
 
 Omakase.Router.map ->
   @resource 'stories', ->
-    @resource 'story', path: '/:story_id'
+    @resource 'story', path: '/:story_id', ->
+      @route 'edit'
     @route 'new'
