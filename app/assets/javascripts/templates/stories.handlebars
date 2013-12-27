@@ -2,7 +2,11 @@
 
 <ul>
   {{#each}}
-    <li>{{title}}</li>
+    <li>
+      {{#link-to 'story' this}}
+        {{title}}
+      {{/link-to}}
+    </li>
   {{/each}}
 </ul>
 

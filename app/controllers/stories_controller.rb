@@ -4,4 +4,7 @@ class StoriesController < ApplicationController
     render json: Story.all
   end
 
+  def show
+    render json: Story.find(params[:id])
+  end
 end
