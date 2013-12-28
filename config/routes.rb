@@ -1,4 +1,6 @@
 Omakase::Application.routes.draw do
+  resources :comments
+
   resources :stories
 
   root :to => 'assets#index'
