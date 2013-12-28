@@ -9,4 +9,5 @@
 # for more details see: http://emberjs.com/guides/application/
 window.Omakase = Ember.Application.create()
 
-Omakase.ApplicationAdapter = DS.RESTAdapter
+Omakase.ApplicationAdapter = DS.RESTAdapter.extend
+  host: 'http://localhost:3000'

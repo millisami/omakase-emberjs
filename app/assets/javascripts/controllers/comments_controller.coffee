@@ -8,4 +8,4 @@ Omakase.CommentsController = Ember.ArrayController.extend
       comment.save().then =>
         story.get('comments').addObject(comment)
         story.save().then =>
-          console.log('Story with new comment saved')
+          @set('body','')

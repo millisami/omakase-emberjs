@@ -43,3 +43,4 @@ gem "ember-rails", "~>0.14"
 gem "ember-source", "~>1.1"
 
 gem 'quiet_assets', group: :development
+gem 'pry-rails', group: :development
