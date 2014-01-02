@@ -11,7 +11,7 @@ Omakase::Application.routes.draw do
 
   resources :stories
 
-  resources :users, only: [:show]
+  resources :users, only: [:show, :index]
 
   root :to => 'assets#index'
   get "assets/index"

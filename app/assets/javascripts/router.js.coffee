@@ -6,3 +6,6 @@ Omakase.Router.map ->
       @route 'edit'
       @resource 'comments'
     @route 'new'
+  @resource 'users', ->
+    @route 'show', path: '/:user_id'
+  @route 'sign-in'

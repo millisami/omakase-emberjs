@@ -1,3 +1,7 @@
 <h1>My Stories</h1>
+<nav>
+  {{#link-to 'stories.index'}}Stories{{/link-to}}
+  {{#link-to 'users.index'}}Users{{/link-to}}
+</nav>
 {{render auth}}
 {{outlet}}

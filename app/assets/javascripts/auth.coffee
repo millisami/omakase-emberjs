@@ -4,7 +4,20 @@ Omakase.Auth = Ember.Auth.extend
   strategy: 'token'
   session: 'cookie'
 
-  modules: ['emberData']
+  modules: [
+    'emberData'
+    'authRedirectable'
+    'actionRedirectable'
+  ]
+
+  authRedirectable:
+    route: 'sign-in'
+
+  actionRedirectable:
+    signInRoute: 'users'
+    signInSmart: true
+    signInBlacklist: ['sign-in']
+    signOutRoute: 'stories'
 
   signInEndPoint: '/sign_in'
   signOutEndPoint: '/sign_out'
