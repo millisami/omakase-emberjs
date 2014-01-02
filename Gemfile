@@ -45,6 +45,8 @@ gem 'ember-auth-session-cookie-rails'
 gem 'ember-auth-module-auth_redirectable-rails'
 gem 'ember-auth-module-action_redirectable-rails'
 gem 'ember-auth-module-timeoutable-rails'
+gem 'ember-auth-module-ember_data-rails'
+gem 'emblem-rails', '~> 0.1'
 
 group :production do
   gem 'rails_12factor', '~> 0.0' # tweaks for heroku
