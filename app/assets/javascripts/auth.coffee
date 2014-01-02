@@ -11,3 +11,6 @@ Omakase.Auth = Ember.Auth.extend
   tokenKey: 'auth_token'
   tokenIdKey: 'user_id'
   tokenLocation: 'param'
+
+  emberData:
+    userModel: 'user'

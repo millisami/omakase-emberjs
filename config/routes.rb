@@ -11,6 +11,8 @@ Omakase::Application.routes.draw do
 
   resources :stories
 
+  resources :users, only: [:show]
+
   root :to => 'assets#index'
   get "assets/index"
   # The priority is based upon order of creation: first created -> highest priority.

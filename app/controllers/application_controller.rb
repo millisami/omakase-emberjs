@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   respond_to :json
-  before_action :default_json
+  # before_action :default_json
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -12,9 +12,9 @@ class ApplicationController < ActionController::Base
   end
 
 protected
-  def default_json
-    request.format = :json if params[:format].nil?
-  end
+  # def default_json
+  #   request.format = :json if params[:format].nil?
+  # end
 
   def auth_only!
     render json: {}, status: 401 unless current_user
