@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -26,21 +26,28 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
-gem "active_model_serializers"
 gem "ember-rails", "~>0.14"
 gem "ember-source", "~>1.1"
 
 gem 'quiet_assets', group: :development
 gem 'pry-rails', group: :development
+
+gem 'devise', '>= 3.0', '< 3.1' # server-side authentication
+                                # 3.1 removes token auth
+gem 'bcrypt-ruby', '~> 3.0' # password encryption
+gem 'active_model_serializers', '~> 0.7' # json that conforms to ember-data expectation
+
+gem 'ember-auth-rails'
+gem 'ember-auth-request-jquery-rails'
+gem 'ember-auth-response-json-rails'
+gem 'ember-auth-strategy-token-rails'
+gem 'ember-auth-session-cookie-rails'
+gem 'ember-auth-module-auth_redirectable-rails'
+gem 'ember-auth-module-action_redirectable-rails'
+gem 'ember-auth-module-rememberable-rails', '~> 1.0'
+gem 'ember-auth-module-ember_data-rails'
+gem 'emblem-rails', '~> 0.1'
+
+group :production do
+  gem 'rails_12factor', '~> 0.0' # tweaks for heroku
+end
