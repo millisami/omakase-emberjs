@@ -44,7 +44,7 @@ gem 'ember-auth-strategy-token-rails'
 gem 'ember-auth-session-cookie-rails'
 gem 'ember-auth-module-auth_redirectable-rails'
 gem 'ember-auth-module-action_redirectable-rails'
-gem 'ember-auth-module-timeoutable-rails'
+gem 'ember-auth-module-rememberable-rails', '~> 1.0'
 gem 'ember-auth-module-ember_data-rails'
 gem 'emblem-rails', '~> 0.1'
 

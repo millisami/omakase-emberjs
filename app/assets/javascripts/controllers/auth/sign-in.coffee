@@ -1,6 +1,7 @@
 Omakase.AuthSignInController = Em.Controller.extend
   email: null
   password: null
+  remember: false
 
   actions:
     signIn: ->
@@ -8,3 +9,4 @@ Omakase.AuthSignInController = Em.Controller.extend
         data:
           email:    @get 'email'
           password: @get 'password'
+          remember: @get 'remember'

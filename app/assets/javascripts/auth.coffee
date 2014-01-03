@@ -8,6 +8,7 @@ Omakase.Auth = Ember.Auth.extend
     'emberData'
     'authRedirectable'
     'actionRedirectable'
+    'rememberable'
   ]
 
   authRedirectable:
@@ -27,3 +28,7 @@ Omakase.Auth = Ember.Auth.extend
 
   emberData:
     userModel: 'user'
+  rememberable:
+    tokenKey: 'remember_token'
+    period: 7 # days
+    autoRecall: true
