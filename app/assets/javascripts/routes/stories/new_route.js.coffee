@@ -2,7 +2,7 @@
 
 Omakase.StoriesNewRoute = Ember.Route.extend
   model: ->
-    @store.createRecord('story')
+    @store.createRecord('story', author: @auth.get('user'))
 
   actions:
     create: (story) ->
